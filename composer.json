@@ -1,0 +1,21 @@
+{
+    "name": "astrameld/prompt-telemetry-php",
+    "description": "Zero-dependency PHP 8.4 utility for calculating LLM token consumption, latency, and cost telemetry.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ali Afzal Yousuf",
+            "email": "hello@astrameld.com",
+            "homepage": "https://astrameld.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Astrameld\\PromptTelemetry\\": "src/"
+        }
+    }
+}
