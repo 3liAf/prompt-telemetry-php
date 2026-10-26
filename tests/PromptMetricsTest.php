@@ -22,4 +22,16 @@ $data = $metrics->toArray();
 assert($data['model'] === 'gpt-4o', 'Model mismatch');
 assert($data['total_tokens'] === 1500, 'Token count mismatch');
 
+// Test new model pricing
+$deepseek = new PromptMetrics(
+    model: 'deepseek-chat',
+    inputTokens: 10000,
+    outputTokens: 5000,
+    durationMs: 2000.0
+);
+assert($deepseek->getEstimatedCostUsd() > 0.002, 'DeepSeek cost calculation failed');
+assert(PromptMetrics::isSupported('deepseek-chat') === true, 'DeepSeek model should be supported');
+assert(PromptMetrics::isSupported('unknown-model') === false, 'Unknown model should not be supported');
+assert(in_array('claude-3-5-haiku', PromptMetrics::getSupportedModels(), true), 'Claude 3.5 Haiku should be listed');
+
 echo "PromptMetricsTest: All assertions passed successfully in PHP " . PHP_VERSION . PHP_EOL;
