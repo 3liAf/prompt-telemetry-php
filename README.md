@@ -1,5 +1,10 @@
 # prompt-telemetry-php
 
+[![CI](https://github.com/3liAf/prompt-telemetry-php/actions/workflows/ci.yml/badge.svg)](https://github.com/3liAf/prompt-telemetry-php/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4.svg?logo=php&logoColor=white)](https://www.php.net/)
+[![Release](https://img.shields.io/github/v/release/3liAf/prompt-telemetry-php)](https://github.com/3liAf/prompt-telemetry-php/releases)
+
 Zero-dependency PHP 8.4+ utility for calculating LLM token consumption, tokens per second, and estimated API expenditure across major model families (OpenAI, Anthropic, Gemini).
 
 ## Features
